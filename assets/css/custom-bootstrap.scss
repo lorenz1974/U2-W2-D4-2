@@ -46,4 +46,15 @@ $custom-font-sizes: (
 
 $font-sizes: map-merge($font-sizes, $custom-font-sizes);
 
+$custom-position-values: (
+  25: 25%,
+  75: 75%,
+);
+
+$position-values: map-merge($position-values, $custom-position-values);
+
 @import '../scss/bootstrap.scss';
+
+body {
+  font-family: 'Inter', sans-serif;
+}

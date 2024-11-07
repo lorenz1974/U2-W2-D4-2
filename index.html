@@ -2,46 +2,134 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Layout sito servizi</title>
 
-    <!-- ... if you prefer Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
-    <link href="./assets/css/custom-bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/custom-bootstrap.css">
 
 </head>
 
 <body class="bg-gray-200">
     <header>
-        <nav>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="assets/imgs/logo.svg" alt="Logo">
+                </a>
+
+                <div class="d-flex justify-content-between flex-grow-0 flex-lg-grow-1">
+
+                    <button class="navbar-toggler order-1 order-lg-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Browse
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">1Action</a></li>
+                                    <li><a class="dropdown-item" href="#">1Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">1Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Landing
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">2Action</a></li>
+                                    <li><a class="dropdown-item" href="#">2Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">2Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">3Action</a></li>
+                                    <li><a class="dropdown-item" href="#">3Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">3Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Account
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">4Action</a></li>
+                                    <li><a class="dropdown-item" href="#">4Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">4Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="user" class="d-flex align-self-end">
+                        <div class="d-flex rounded-circle bg-gray-200 text-gray-400">
+                            <i class="fa-regular fa-bell p-3 position-relative">
+                                <span
+                                    class="position-absolute top-25 start-75 translate-middle p-1 bg-indigo rounded-circle">
+                                </span></i>
+                        </div>
+                        <div class="d-flex rounded-circle bg-gray-300 ms-2  position-relative">
+                            <img width="50px" src="/assets/imgs/avatar-1.jpg"
+                                class="rounded-circle object-fit-cover"></i>
+                            <span
+                                class="position-absolute bottom-0 start-75 translate-middle p-1 bg-success rounded-circle">
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </nav>
+
     </header>
 
     <main>
         <!-- HERO -->
 
-        <div id="hero"
-            class="row p-3 p-sm-2 p-md-1  d-flex flex-column justify-content-center bg-indigo-400 flex-sm-row">
-            <div class="col-12 col-md-4 align-content-center">
+        <div id="hero" class="row d-flex flex-column justify-content-center bg-indigo-400 flex-sm-row">
+            <div class="col-12 col-md-4 align-content-center p-5">
                 <h1 class="text-light fs-1 fw-bold">Welcome Web Students!</h1>
                 <p class="text-indigo-200 fs-4">Hand-picked Instructor and expertly crafted courses, designed for
                     the
                     modern students and
                     entrepreneur.</p>
                 <div id="buttons">
-                    <button type="button"
-                        class="btn btn-teal px-2 py-1 px-lg-4 py-lg-3 text-light fw-semibold fs-6">Browse
+                    <button type="button" class="btn btn-teal mt-2 mb-2 py-lg-3 text-light fw-semibold fs-6">Browse
                         Courses</button>
-                    <button type="button" class="btn btn-light px-2 py-1 px-lg-4 py-lg-3 fw-semibold fs-6">Are You
+                    <button type="button" class="btn btn-light mt-2 mb-2 py-lg-3 fw-semibold fs-6">Are You
                         Instructor?</button>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div id="imageElements" class="">
+            <div class="col-12 col-md-6 mt-2 mt-sm-1 align-self-end">
+                <div id="imageElements" class="h-100">
                     <img class="w-100" src="/assets/imgs/hero-img.png">
                 </div>
             </div>
@@ -85,11 +173,408 @@
 
         <!-- CARDS -->
 
+
         <div class="container">
-            <h2>Racommended to you</h2>
+            <h3 class="mt-5 mb-5">Racommended to you</h2>
+                <section id="racommendedToYou">
+                    <div class="row">
+                        <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                            <div class="card rounded rounded-4">
+                                <img class="card-img-top rounded-top-4" src="/assets/imgs/course-graphql.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">GraphQL: introduction to graphQL for beginners
+                                    </h5>
+                                </div>
+                                <ul class="list-group-flush border-0">
+                                    <li class="list-group-item border-0 fw-light"><i class="fa-regular fa-clock"></i>
+                                        2h 40m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Advance</li>
+                                    <li class="list-group-item border-0">
+                                        <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star-half-stroke"></i><i
+                                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>2.5
+                                        </p> (5,500)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p class="fw-bolder d-inline">$500</p>
+                                        <del class="d-inline">$600</p>
+                                    </li>
+                                </ul>
+                                <div
+                                    class="card-body d-flex justify-content-between align-items-center border border-top">
+                                    <p><img width="30px" class="rounded-circle pe-2"
+                                            src="./assets/imgs/avatar-5.jpg">Brooklyn Simmons</p>
+                                    <i class="fa-regular fa-bookmark"></i></i>
+                                </div>
+                            </div>
+                        </div> <!------------------------------>
+                        <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                            <div class="card rounded rounded-4">
+                                <img class="card-img-top rounded-top-4" src="/assets/imgs/course-javascript.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">A Complete Beginner’s Guide to JavaScript
+                                    </h5>
+                                </div>
+                                <ul class="list-group-flush border-0">
+                                    <li class="list-group-item border-0 fw-light"><i class="fa-regular fa-clock"></i>
+                                        4h 10m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Advance</li>
+                                    <li class="list-group-item border-0">
+                                        <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star-half-stroke"></i><i
+                                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>3.5
+                                        </p> (7,500)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p class="fw-bolder d-inline">$700</p>
+                                        <del class="d-inline">$650</p>
+                                    </li>
+                                </ul>
+                                <div
+                                    class="card-body d-flex justify-content-between align-items-center border border-top">
+                                    <p><img width="30px" class="rounded-circle pe-2"
+                                            src="./assets/imgs/avatar-3.jpg">Jenny Wilson</p>
+                                    <i class="fa-regular fa-bookmark"></i></i>
+                                </div>
+                            </div>
+                        </div><!------------------------------>
+                        <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                            <div class="card rounded rounded-4">
+                                <img class="card-img-top rounded-top-4" src="/assets/imgs/course-node.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beginning Node.js, Express & MongoDB Development
 
+                                    </h5>
+                                </div>
+                                <ul class="list-group-flush border-0">
+                                    <li class="list-group-item border-0 fw-light"><i class="fa-regular fa-clock"></i>
+                                        2h 0m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Advance</li>
+                                    <li class="list-group-item border-0">
+                                        <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star-half-stroke"></i><i
+                                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>40 </p>
+                                        (15,700)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p class="fw-bolder d-inline">$800</p>
+                                        <del class="d-inline">$650</p>
+                                    </li>
+                                </ul>
+                                <div
+                                    class="card-body d-flex justify-content-between align-items-center border border-top">
+                                    <p><img width="30px" class="rounded-circle pe-2"
+                                            src="./assets/imgs/avatar-3.jpg">Sina Ray</p>
+                                    <i class="fa-regular fa-bookmark"></i></i>
+                                </div>
+                            </div>
+                        </div><!------------------------------>
+                        <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                            <div class="card rounded rounded-4">
+                                <img class="card-img-top rounded-top-4" src="/assets/imgs/course-laravel.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Laravel: The Ultimate Beginner’s Guide to Learn
+
+                                    </h5>
+                                </div>
+                                <ul class="list-group-flush border-0">
+                                    <li class="list-group-item border-0 fw-light"><i class="fa-regular fa-clock"></i>
+                                        0h 10m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Advance</li>
+                                    <li class="list-group-item border-0">
+                                        <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star-half-stroke"></i><i
+                                                class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>4.5
+                                        </p> (5,500)
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p class="fw-bolder d-inline">$170</p>
+                                        <del class="d-inline">$200</p>
+                                    </li>
+                                </ul>
+                                <div
+                                    class="card-body d-flex justify-content-between align-items-center border border-top">
+                                    <p><img width="30px" class="rounded-circle pe-2"
+                                            src="./assets/imgs/avatar-7.jpg">Sobo Rikhan</p>
+                                    <i class="fa-regular fa-bookmark"></i></i>
+                                </div>
+                            </div>
+                        </div><!------------------------------>
+                    </div>
+                </section>
+
+
+                <h3 class="mt-5 mb-5">Most popular</h2>
+                    <section id="mostPopular">
+                        <div class="row">
+                            <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                <div class="card rounded rounded-4">
+                                    <img class="card-img-top rounded-top-4" src="/assets/imgs/course-html.jpg"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">HTML Full Course - Build a Website Tutorial</h5>
+                                    </div>
+                                    <ul class="list-group-flush border-0">
+                                        <li class="list-group-item border-0 fw-light"><i
+                                                class="fa-regular fa-clock"></i>
+                                            3h 16m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Beginner</li>
+                                        <li class="list-group-item border-0">
+                                            <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star-half-stroke"></i><i
+                                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>3.0
+                                            </p> (1,800)
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="fw-bolder d-inline">$550</p>
+                                            <del class="d-inline">$700</del>
+                                        </li>
+                                    </ul>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center border border-top">
+                                        <p><img width="30px" class="rounded-circle pe-2"
+                                                src="./assets/imgs/avatar-6.jpg">Miston Wilson</p>
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div> <!------------------------------>
+                            <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                <div class="card rounded rounded-4">
+                                    <img class="card-img-top rounded-top-4" src="/assets/imgs/course-javascript.jpg"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">A Complete Beginner’s Guide to JavaScript</h5>
+                                    </div>
+                                    <ul class="list-group-flush border-0">
+                                        <li class="list-group-item border-0 fw-light"><i
+                                                class="fa-regular fa-clock"></i>
+                                            4h 10m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Advance</li>
+                                        <li class="list-group-item border-0">
+                                            <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star-half-stroke"></i><i
+                                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>3.5
+                                            </p> (7,500)
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="fw-bolder d-inline">$700</p>
+                                            <del class="d-inline">$650</del>
+                                        </li>
+                                    </ul>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center border border-top">
+                                        <p><img width="30px" class="rounded-circle pe-2"
+                                                src="./assets/imgs/avatar-3.jpg">Jenny Wilson</p>
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div> <!------------------------------>
+                            <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                <div class="card rounded rounded-4">
+                                    <img class="card-img-top rounded-top-4" src="/assets/imgs/course-node.jpg"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Beginning Node.js, Express & MongoDB Development</h5>
+                                    </div>
+                                    <ul class="list-group-flush border-0">
+                                        <li class="list-group-item border-0 fw-light"><i
+                                                class="fa-regular fa-clock"></i>
+                                            2h 0m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Intermediate</li>
+                                        <li class="list-group-item border-0">
+                                            <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star-half-stroke"></i><i
+                                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>4.0
+                                            </p> (15,700)
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="fw-bolder d-inline">$800</p>
+                                            <del class="d-inline">$650</del>
+                                        </li>
+                                    </ul>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center border border-top">
+                                        <p><img width="30px" class="rounded-circle pe-2"
+                                                src="./assets/imgs/avatar-3.jpg">Sina Ray</p>
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div> <!------------------------------>
+                            <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                <div class="card rounded rounded-4">
+                                    <img class="card-img-top rounded-top-4" src="/assets/imgs/course-react.jpg"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">How to easily create a website with React</h5>
+                                    </div>
+                                    <ul class="list-group-flush border-0">
+                                        <li class="list-group-item border-0 fw-light"><i
+                                                class="fa-regular fa-clock"></i>
+                                            3h 55m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Advance</li>
+                                        <li class="list-group-item border-0">
+                                            <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star-half-stroke"></i><i
+                                                    class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>4.5
+                                            </p> (1,500)
+                                        </li>
+                                        <li class="list-group-item">
+                                            <p class="fw-bolder d-inline">$600</p>
+                                            <del class="d-inline">$750</del>
+                                        </li>
+                                    </ul>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center border border-top">
+                                        <p><img width="30px" class="rounded-circle pe-2"
+                                                src="./assets/imgs/avatar-4.jpg">April Noms</p>
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div> <!------------------------------>
+                        </div>
+                    </section>
+
+
+                    <h3 class="mt-5 mb-5">Trending</h2>
+                        <section id="trending">
+                            <div class="row">
+                                <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                    <div class="card rounded rounded-4">
+                                        <img class="card-img-top rounded-top-4" src="/assets/imgs/course-gatsby.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Revolutionize how you build the web</h5>
+                                        </div>
+                                        <ul class="list-group-flush border-0">
+                                            <li class="list-group-item border-0 fw-light"><i
+                                                    class="fa-regular fa-clock"></i>
+                                                1h 46m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Intermediate
+                                            </li>
+                                            <li class="list-group-item border-0">
+                                                <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i
+                                                        class="fa-regular fa-star"></i><i
+                                                        class="fa-regular fa-star"></i><i
+                                                        class="fa-regular fa-star"></i>2.0
+                                                </p> (18,500)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <p class="fw-bolder d-inline">$800</p>
+                                                <del class="d-inline">$850</del>
+                                            </li>
+                                        </ul>
+                                        <div
+                                            class="card-body d-flex justify-content-between align-items-center border border-top">
+                                            <p><img width="30px" class="rounded-circle pe-2"
+                                                    src="./assets/imgs/avatar-3.jpg">Jenny Wilson</p>
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </div>
+                                    </div>
+                                </div> <!------------------------------>
+                                <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                    <div class="card rounded rounded-4">
+                                        <img class="card-img-top rounded-top-4" src="/assets/imgs/course-html.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">HTML Full Course - Build a Website Tutorial</h5>
+                                        </div>
+                                        <ul class="list-group-flush border-0">
+                                            <li class="list-group-item border-0 fw-light"><i
+                                                    class="fa-regular fa-clock"></i>
+                                                3h 16m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Beginner</li>
+                                            <li class="list-group-item border-0">
+                                                <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star-half-stroke"></i><i
+                                                        class="fa-regular fa-star"></i><i
+                                                        class="fa-regular fa-star"></i>3.0
+                                                </p> (1,800)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <p class="fw-bolder d-inline">$550</p>
+                                                <del class="d-inline">$700</del>
+                                            </li>
+                                        </ul>
+                                        <div
+                                            class="card-body d-flex justify-content-between align-items-center border border-top">
+                                            <p><img width="30px" class="rounded-circle pe-2"
+                                                    src="./assets/imgs/avatar-6.jpg">Miston Wilson</p>
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </div>
+                                    </div>
+                                </div> <!------------------------------>
+                                <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                    <div class="card rounded rounded-4">
+                                        <img class="card-img-top rounded-top-4" src="/assets/imgs/course-node.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Beginning Node.js, Express & MongoDB Development</h5>
+                                        </div>
+                                        <ul class="list-group-flush border-0">
+                                            <li class="list-group-item border-0 fw-light"><i
+                                                    class="fa-regular fa-clock"></i>
+                                                2h 0m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Intermediate
+                                            </li>
+                                            <li class="list-group-item border-0">
+                                                <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star-half-stroke"></i><i
+                                                        class="fa-regular fa-star"></i><i
+                                                        class="fa-regular fa-star"></i>4.0
+                                                </p> (15,700)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <p class="fw-bolder d-inline">$800</p>
+                                                <del class="d-inline">$650</del>
+                                            </li>
+                                        </ul>
+                                        <div
+                                            class="card-body d-flex justify-content-between align-items-center border border-top">
+                                            <p><img width="30px" class="rounded-circle pe-2"
+                                                    src="./assets/imgs/avatar-3.jpg">Sina Ray</p>
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </div>
+                                    </div>
+                                </div> <!------------------------------>
+                                <div class="d-flex col-12 col-sm-6 col-lg-3 mt-3"> <!------------------------------>
+                                    <div class="card rounded rounded-4">
+                                        <img class="card-img-top rounded-top-4" src="/assets/imgs/course-laravel.jpg"
+                                            alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Laravel: The Ultimate Beginner’s Guide to Learn</h5>
+                                        </div>
+                                        <ul class="list-group-flush border-0">
+                                            <li class="list-group-item border-0 fw-light"><i
+                                                    class="fa-regular fa-clock"></i>
+                                                0h 10m <i class="fa-solid fa-signal ms-1 text-indigo"></i> Beginner</li>
+                                            <li class="list-group-item border-0">
+                                                <p class="text-orange-400 d-inline"><i class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star"></i><i
+                                                        class="fa-solid fa-star-half-stroke"></i><i
+                                                        class="fa-regular fa-star"></i><i
+                                                        class="fa-regular fa-star"></i>4.5
+                                                </p> (5,500)
+                                            </li>
+                                            <li class="list-group-item">
+                                                <p class="fw-bolder d-inline">$170</p>
+                                                <del class="d-inline">$200</del>
+                                            </li>
+                                        </ul>
+                                        <div
+                                            class="card-body d-flex justify-content-between align-items-center border border-top">
+                                            <p><img width="30px" class="rounded-circle pe-2"
+                                                    src="./assets/imgs/avatar-7.jpg">Sobo Rikhan</p>
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </div>
+                                    </div>
+                                </div> <!------------------------------>
+                            </div>
+                        </section>
         </div>
-
     </main>
 
     <footer>
@@ -97,25 +582,7 @@
 
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
-
-    <!-- You can also include Popper and our JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, -->
-    <!-- save some kilobytes by not including Popper. -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
-
-    <!-- Some Tools Script -->
-    <script src="https://tech-mentor.it/tools/jsTools.js"></script>
-
-    <!-- Insert you scripts here. -->
-    <!-- <script src="/myScript.js"></script> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
